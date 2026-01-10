@@ -36,7 +36,7 @@ figcaption {
     text-align: center;
 }
 
-.buttons {
+.links {
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -44,7 +44,8 @@ figcaption {
     padding: 24px;
     width: 100%;
 
-    button {
+    a {
+        text-decoration: none;
         padding: 14px;
         font-weight: 600;
         font-size: 16px;
@@ -57,32 +58,32 @@ figcaption {
         transition: 0.3s;
         gap: 10px
     }
-    
-    button:hover {
+
+    a:hover {
         transform: scale(1.1,1.1);
     }
-    
+
     i {
         font-size: 25px;
     }
 
-    .btn-email {
+    .link-email {
         background-color: #0040ff;
         color: #fff;
     }
 
-    .btn-linkedin {
+    .link-linkedin {
         background-color: #1877f2;
         color: #fff;
     }
 
-    .btn-github {
+    .link-github {
         background-color: #000;
         color: #fff;
         border: 1px solid #fff;
     }
 
-    .btn-instagram {
+    .link-instagram {
         background: linear-gradient(
             13deg,
             #fa7e1e,
