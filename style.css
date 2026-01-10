@@ -18,7 +18,8 @@ body {
 }
 
 .container {
-    width: 588px;
+    width: 100%;
+    max-width: 588px;
 }
 
 img {
@@ -100,4 +101,12 @@ p {
     color: #fff;
     font-weight: 300;
     font-size: 14px;
+}
+
+@media (max-width: 1040px) {
+    body {
+        background-image: url('./assets/bg-mobile.jpg');
+        background-size: cover;
+        background-position: center;
+    }
 }
