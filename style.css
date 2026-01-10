@@ -6,3 +6,97 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+
+body {
+    background-image: url('./assets/bg-dark-mode.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    width: 588px;
+}
+
+img {
+    border-radius: 999px;
+    height: 122px;
+    display: block;
+    margin: 50px auto 0;
+}
+
+figcaption {
+    color: #fff;
+    font-weight: 300;
+    font-size: 16px;
+    margin-top: 8px;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 10px;
+    padding: 24px;
+    width: 100%;
+
+    button {
+        padding: 14px;
+        font-weight: 600;
+        font-size: 16px;
+        border-radius: 8px;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: 0.3s;
+        gap: 10px
+    }
+    
+    button:hover {
+        transform: scale(1.1,1.1);
+    }
+    
+    i {
+        font-size: 25px;
+    }
+
+    .btn-email {
+        background-color: #0040ff;
+        color: #fff;
+    }
+
+    .btn-linkedin {
+        background-color: #1877f2;
+        color: #fff;
+    }
+
+    .btn-github {
+        background-color: #000;
+        color: #fff;
+        border: 1px solid #fff;
+    }
+
+    .btn-instagram {
+        background: linear-gradient(
+            13deg,
+            #fa7e1e,
+            #d62976,
+            #962fbf,
+            #4f5bd5
+        );
+        color: #fff;
+    }
+}
+
+p {
+    text-align: center;
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+}
