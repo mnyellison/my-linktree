@@ -15,6 +15,36 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    transition: 0.5s;
+}
+
+.mode-light {
+    background-image: url('./assets/bg-light-mode.png');
+    background-size: cover;
+    background-position: center;
+
+    .toggle {
+        background: #f2f2f2;
+        box-shadow: 10px 10px 20px rgba(255, 255, 255, 0.8),
+        -10px -10px 30px rgba(0, 0, 0, 0.15) inset;
+    }
+
+    .circle {
+        left: 50%;
+        background: #fff;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.05),
+        -10px -10px 30px rgba(0, 0, 0, 0.05) inset;
+    }
+
+    p {
+        color: #000;
+        font-weight: 400;
+    }
+
+    figcaption {
+        color: #000;
+        font-weight: 400;
+    }
 }
 
 .container {
@@ -27,6 +57,7 @@ img {
     height: 122px;
     display: block;
     margin: 50px auto 0;
+    transition: 0.5s;
 }
 
 figcaption {
@@ -35,6 +66,34 @@ figcaption {
     font-size: 16px;
     margin-top: 8px;
     text-align: center;
+}
+
+.toggle {
+    width: 64px;
+    height: 25px;
+    background: #1f1f21;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5) inset;
+    border-radius: 100px;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 24px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #2c2c2f;
+    transform: scale(1.15);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5),
+    -10px -10px 30px rgba(0, 0, 0, 0.5) inset;
+    left: 0;
+    transition: 0.5s;
+    position: absolute;
 }
 
 .links {
@@ -106,6 +165,12 @@ p {
 @media (max-width: 1040px) {
     body {
         background-image: url('./assets/bg-mobile.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .mode-light {
+        background-image: url('./assets/bg-mobile-light.jpg');
         background-size: cover;
         background-position: center;
     }
