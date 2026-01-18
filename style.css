@@ -23,19 +23,6 @@ body {
     background-size: cover;
     background-position: center;
 
-    .toggle {
-        background: #f2f2f2;
-        box-shadow: 10px 10px 20px rgba(255, 255, 255, 0.8),
-        -10px -10px 30px rgba(0, 0, 0, 0.15) inset;
-    }
-
-    .circle {
-        left: 50%;
-        background: #fff;
-        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.05),
-        -10px -10px 30px rgba(0, 0, 0, 0.05) inset;
-    }
-
     p {
         color: #000;
         font-weight: 400;
@@ -68,39 +55,84 @@ figcaption {
     text-align: center;
 }
 
-.toggle {
-    width: 64px;
-    height: 25px;
-    background: #1f1f21;
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5) inset;
-    border-radius: 100px;
-    position: relative;
-    margin: 0 auto;
-    margin-top: 24px;
-    cursor: pointer;
+input {
+    display: none;
+}
+
+.display {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+}
+
+label {
+    width: 54px;
+    height: 20px;
+    border-radius: 100px;
+    margin-top: 24px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+    position: relative;
 }
 
 .circle {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background: #2c2c2f;
-    transform: scale(1.15);
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5),
-    -10px -10px 30px rgba(0, 0, 0, 0.5) inset;
-    left: 0;
-    transition: 0.5s;
+    background: #fff;
     position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    overflow: hidden;
+
+    i {
+        position: absolute;
+    }
+}
+
+.bx.bxs-moon {
+    margin-top: 0%;
+    color: #000;
+}
+
+.bx.bxs-sun {
+    color: #000;
+    margin-top: 50px;
+}
+
+input[type=checkbox]:checked + .display label {
+    border: 1px solid #776a74;
+    background: #eed2e8;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+input[type=checkbox]:checked + .display label .circle {
+    left: 100%;
+    transform: translate(-96%, -50%);
+    background: #fff;
+}
+
+input[type=checkbox]:checked + .display label .circle .bx.bxs-moon {
+    margin-top: 50px;
+}
+
+input[type=checkbox]:checked + .display label .circle .bx.bxs-sun {
+    margin-top: 0%;
 }
 
 .links {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    margin-top: 10px;
     padding: 24px;
     width: 100%;
 
@@ -129,11 +161,6 @@ figcaption {
 
     .link-email {
         background-color: #0040ff;
-        color: #fff;
-    }
-
-    .link-linkedin {
-        background-color: #1877f2;
         color: #fff;
     }
 

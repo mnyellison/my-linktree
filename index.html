@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,21 @@
     <link rel="stylesheet" href="style.css">
     <title>Linktree</title>
 </head>
+
 <body>
     <main class="container">
         <img src="./assets/profile-picture.jpg" alt="profile-picture">
         <figcaption>@mnyellison</figcaption>
 
-        <div class="toggle">
-            <div class="circle"></div>
+        <input type="checkbox" id="toggle">
+
+        <div class="display">
+            <label for="toggle">
+                <div class="circle">
+                    <i class='bx bxs-moon'></i>
+                    <i class='bx bxs-sun'></i>
+                </div>
+            </label>
         </div>
 
         <div class="links">
@@ -21,16 +30,12 @@
                 <i class='bx bxs-envelope'></i>
                 Email
             </a>
-            <a class="link-linkedin" href="https://www.linkedin.com/in/nyellison-matheus/" target="_blank">
-                <i class='bx bxl-linkedin-square' ></i>
-                Linkedin
-            </a>
             <a class="link-github" href="https://github.com/mnyellison" target="_blank">
-                <i class='bx bxl-github' ></i>
+                <i class='bx bxl-github'></i>
                 GitHub
             </a>
             <a class="link-instagram" href="https://www.instagram.com/mnyellison/" target="_blank">
-                <i class='bx bxl-instagram' ></i>
+                <i class='bx bxl-instagram'></i>
                 Instagram
             </a>
         </div>
@@ -39,4 +44,5 @@
     </main>
 </body>
 <script src="script.js"></script>
+
 </html>
